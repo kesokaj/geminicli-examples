@@ -53,27 +53,171 @@ Once you've created your command, you can run it from the Gemini CLI by typing `
 
 This repository provides a starting point for customizing the Gemini CLI to fit your needs. By creating your own custom commands and configuring the `settings.json` file, you can turn the Gemini CLI into a powerful tool that helps you work more efficiently.
 
-## Subagent Contexts
+## Agent Contexts
 
-Subagent contexts are a powerful feature that allows you to switch between different "personas" or "subagents" within the Gemini CLI. Each subagent can have its own unique set of custom commands, settings, and context, allowing you to tailor the CLI to specific tasks or workflows.
+Agent contexts allow you to specialize the behavior of the Gemini CLI for specific tasks. By loading a context file, you can provide the model with a specific persona, skills, and instructions, making it more effective for the task at hand.
 
-### Subagent Categories
+### How to use Agent Contexts
 
-Subagents are organized into categories, each with its own specific purpose. Here are some of the available categories:
+You can load an agent context at the beginning of your conversation by referencing the context file in the settings.json file. The Gemini CLI will then adopt the persona and instructions defined in that file.
 
-*   **Code Generation**: Subagents in this category are designed to help you write code more efficiently. They can provide code snippets, generate boilerplate code, and even write entire functions or classes based on your specifications.
-*   **Code Review**: These subagents are designed to help you review code and identify potential issues. They can check for common errors, suggest improvements, and even provide feedback on the overall quality of the code.
-*   **Documentation**: Subagents in this category are designed to help you write documentation. They can generate documentation from your code, provide templates for common documentation formats, and even help you write clear and concise explanations of your code.
-*   **Project Management**: These subagents are designed to help you manage your projects. They can help you create and track tasks, manage your project's timeline, and even generate reports on your project's progress.
+### Agent Context Categories
 
-### Usage
+This repository includes a wide variety of pre-built agent contexts in the `agent_context_example` directory. These are organized into the following categories:
 
-To use a subagent, you can use the `/switch` command followed by the name of the subagent you want to use. For example, to switch to the `python-coder` subagent, you would type `/switch python-coder`.
+*   [Core Development](./agent_context_example/01-core-development)
+*   [Language Specialists](./agent_context_example/02-language-specialists)
+*   [Infrastructure](./agent_context_example/03-infrastructure)
+*   [Quality & Security](./agent_context_example/04-quality-security)
+*   [Data & AI](./agent_context_example/05-data-ai)
+*   [Developer Experience](./agent_context_example/06-developer-experience)
+*   [Specialized Domains](./agent_context_example/07-specialized-domains)
+*   [Business & Product](./agent_context_example/08-business-product)
+*   [Meta & Orchestration](./agent_context_example/09-meta-orchestration)
+*   [Research & Analysis](./agent_context_example/10-research-analysis)
 
-Once you've switched to a subagent, you'll have access to all of its custom commands and settings. You can also provide additional context to the subagent by using the `/context` command.
+### Core Development
 
-### Contribution
+*   [API Designer](./agent_context_example/01-core-development/api-designer.md)
+*   [Backend Developer](./agent_context_example/01-core-development/backend-developer.md)
+*   [Electron Pro](./agent_context_example/01-core-development/electron-pro.md)
+*   [Frontend Developer](./agent_context_example/01-core-development/frontend-developer.md)
+*   [Fullstack Developer](./agent_context_example/01-core-development/fullstack-developer.md)
+*   [GraphQL Architect](./agent_context_example/01-core-development/graphql-architect.md)
+*   [Microservices Architect](./agent_context_example/01-core-development/microservices-architect.md)
+*   [Mobile Developer](./agent_context_example/01-core-development/mobile-developer.md)
+*   [UI Designer](./agent_context_example/01-core-development/ui-designer.md)
+*   [Websocket Engineer](./agent_context_example/01-core-development/websocket-engineer.md)
+*   [Wordpress Master](./agent_context_example/01-core-development/wordpress-master.md)
 
-If you'd like to contribute your own subagent to the community, you can do so by creating a new directory in the `subagents` directory. The directory should contain a `manifest.json` file that describes the subagent, as well as any custom commands or settings that the subagent uses.
+### Language Specialists
 
-Once you've created your subagent, you can submit a pull request to the official Gemini CLI repository to have it included in the next release.
+*   [Angular Architect](./agent_context_example/02-language-specialists/angular-architect.md)
+*   [C++ Pro](./agent_context_example/02-language-specialists/cpp-pro.md)
+*   [C# Developer](./agent_context_example/02-language-specialists/csharp-developer.md)
+*   [Django Developer](./agent_context_example/02-language-specialists/django-developer.md)
+*   [.NET Core Expert](./agent_context_example/02-language-specialists/dotnet-core-expert.md)
+*   [.NET Framework 4.8 Expert](./agent_context_example/02-language-specialists/dotnet-framework-4.8-expert.md)
+*   [Flutter Expert](./agent_context_example/02-language-specialists/flutter-expert.md)
+*   [Golang Pro](./agent_context_example/02-language-specialists/golang-pro.md)
+*   [Java Architect](./agent_context_example/02-language-specialists/java-architect.md)
+*   [JavaScript Pro](./agent_context_example/02-language-specialists/javascript-pro.md)
+*   [Kotlin Specialist](./agent_context_example/02-language-specialists/kotlin-specialist.md)
+*   [Laravel Specialist](./agent_context_example/02-language-specialists/laravel-specialist.md)
+*   [Next.js Developer](./agent_context_example/02-language-specialists/nextjs-developer.md)
+*   [PHP Pro](./agent_context_example/02-language-specialists/php-pro.md)
+*   [Python Pro](./agent_context_example/02-language-specialists/python-pro.md)
+*   [Rails Expert](./agent_context_example/02-language-specialists/rails-expert.md)
+*   [React Specialist](./agent_context_example/02-language-specialists/react-specialist.md)
+*   [Rust Engineer](./agent_context_example/02-language-specialists/rust-engineer.md)
+*   [Spring Boot Engineer](./agent_context_example/02-language-specialists/spring-boot-engineer.md)
+*   [SQL Pro](./agent_context_example/02-language-specialists/sql-pro.md)
+*   [Swift Expert](./agent_context_example/02-language-specialists/swift-expert.md)
+*   [TypeScript Pro](./agent_context_example/02-language-specialists/typescript-pro.md)
+*   [Vue Expert](./agent_context_example/02-language-specialists/vue-expert.md)
+
+### Infrastructure
+
+*   [Cloud Architect](./agent_context_example/03-infrastructure/cloud-architect.md)
+*   [Database Administrator](./agent_context_example/03-infrastructure/database-administrator.md)
+*   [Deployment Engineer](./agent_context_example/03-infrastructure/deployment-engineer.md)
+*   [DevOps Engineer](./agent_context_example/03-infrastructure/devops-engineer.md)
+*   [DevOps Incident Responder](./agent_context_example/03-infrastructure/devops-incident-responder.md)
+*   [Incident Responder](./agent_context_example/03-infrastructure/incident-responder.md)
+*   [Kubernetes Specialist](./agent_context_example/03-infrastructure/kubernetes-specialist.md)
+*   [Network Engineer](./agent_context_example/03-infrastructure/network-engineer.md)
+*   [Platform Engineer](./agent_context_example/03-infrastructure/platform-engineer.md)
+*   [Security Engineer](./agent_context_example/03-infrastructure/security-engineer.md)
+*   [SRE Engineer](./agent_context_example/03-infrastructure/sre-engineer.md)
+*   [Terraform Engineer](./agent_context_example/03-infrastructure/terraform-engineer.md)
+
+### Quality & Security
+
+*   [Accessibility Tester](./agent_context_example/04-quality-security/accessibility-tester.md)
+*   [Architect Reviewer](./agent_context_example/04-quality-security/architect-reviewer.md)
+*   [Chaos Engineer](./agent_context_example/04-quality-security/chaos-engineer.md)
+*   [Code Reviewer](./agent_context_example/04-quality-security/code-reviewer.md)
+*   [Compliance Auditor](./agent_context_example/04-quality-security/compliance-auditor.md)
+*   [Debugger](./agent_context_example/04-quality-security/debugger.md)
+*   [Error Detective](./agent_context_example/04-quality-security/error-detective.md)
+*   [Penetration Tester](./agent_context_example/04-quality-security/penetration-tester.md)
+*   [Performance Engineer](./agent_context_example/04-quality-security/performance-engineer.md)
+*   [QA Expert](./agent_context_example/04-quality-security/qa-expert.md)
+*   [Security Auditor](./agent_context_example/04-quality-security/security-auditor.md)
+*   [Test Automator](./agent_context_example/04-quality-security/test-automator.md)
+
+### Data & AI
+
+*   [AI Engineer](./agent_context_example/05-data-ai/ai-engineer.md)
+*   [Data Analyst](./agent_context_example/05-data-ai/data-analyst.md)
+*   [Data Engineer](./agent_context_example/05-data-ai/data-engineer.md)
+*   [Data Scientist](./agent_context_example/05-data-ai/data-scientist.md)
+*   [Database Optimizer](./agent_context_example/05-data-ai/database-optimizer.md)
+*   [LLM Architect](./agent_context_example/05-data-ai/llm-architect.md)
+*   [Machine Learning Engineer](./agent_context_example/05-data-ai/machine-learning-engineer.md)
+*   [ML Engineer](./agent_context_example/05-data-ai/ml-engineer.md)
+*   [MLOps Engineer](./agent_context_example/05-data-ai/mlops-engineer.md)
+*   [NLP Engineer](./agent_context_example/05-data-ai/nlp-engineer.md)
+*   [Postgres Pro](./agent_context_example/05-data-ai/postgres-pro.md)
+*   [Prompt Engineer](./agent_context_example/05-data-ai/prompt-engineer.md)
+
+### Developer Experience
+
+*   [Build Engineer](./agent_context_example/06-developer-experience/build-engineer.md)
+*   [CLI Developer](./agent_context_example/06-developer-experience/cli-developer.md)
+*   [Dependency Manager](./agent_context_example/06-developer-experience/dependency-manager.md)
+*   [Documentation Engineer](./agent_context_example/06-developer-experience/documentation-engineer.md)
+*   [DX Optimizer](./agent_context_example/06-developer-experience/dx-optimizer.md)
+*   [Git Workflow Manager](./agent_context_example/06-developer-experience/git-workflow-manager.md)
+*   [Legacy Modernizer](./agent_context_example/06-developer-experience/legacy-modernizer.md)
+*   [MCP Developer](./agent_context_example/06-developer-experience/mcp-developer.md)
+*   [Refactoring Specialist](./agent_context_example/06-developer-experience/refactoring-specialist.md)
+*   [Tooling Engineer](./agent_context_example/06-developer-experience/tooling-engineer.md)
+
+### Specialized Domains
+
+*   [API Documenter](./agent_context_example/07-specialized-domains/api-documenter.md)
+*   [Blockchain Developer](./agent_context_example/07-specialized-domains/blockchain-developer.md)
+*   [Embedded Systems](./agent_context_example/07-specialized-domains/embedded-systems.md)
+*   [Fintech Engineer](./agent_context_example/07-specialized-domains/fintech-engineer.md)
+*   [Game Developer](./agent_context_example/07-specialized-domains/game-developer.md)
+*   [IoT Engineer](./agent_context_example/07-specialized-domains/iot-engineer.md)
+*   [Mobile App Developer](./agent_context_example/07-specialized-domains/mobile-app-developer.md)
+*   [Payment Integration](./agent_context_example/07-specialized-domains/payment-integration.md)
+*   [Quant Analyst](./agent_context_example/07-specialized-domains/quant-analyst.md)
+*   [Risk Manager](./agent_context_example/07-specialized-domains/risk-manager.md)
+*   [SEO Specialist](./agent_context_example/07-specialized-domains/seo-specialist.md)
+
+### Business & Product
+
+*   [Business Analyst](./agent_context_example/08-business-product/business-analyst.md)
+*   [Content Marketer](./agent_context_example/08-business-product/content-marketer.md)
+*   [Customer Success Manager](./agent_context_example/08-business-product/customer-success-manager.md)
+*   [Legal Advisor](./agent_context_example/08-business-product/legal-advisor.md)
+*   [Product Manager](./agent_context_example/08-business-product/product-manager.md)
+*   [Project Manager](./agent_context_example/08-business-product/project-manager.md)
+*   [Sales Engineer](./agent_context_example/08-business-product/sales-engineer.md)
+*   [Scrum Master](./agent_context_example/08-business-product/scrum-master.md)
+*   [Technical Writer](./agent_context_example/08-business-product/technical-writer.md)
+*   [UX Researcher](./agent_context_example/08-business-product/ux-researcher.md)
+*   [Wordpress Master](./agent_context_example/08-business-product/wordpress-master.md)
+
+### Meta & Orchestration
+
+*   [Agent Organizer](./agent_context_example/09-meta-orchestration/agent-organizer.md)
+*   [Context Manager](./agent_context_example/09-meta-orchestration/context-manager.md)
+*   [Error Coordinator](./agent_context_example/09-meta-orchestration/error-coordinator.md)
+*   [Knowledge Synthesizer](./agent_context_example/09-meta-orchestration/knowledge-synthesizer.md)
+*   [Multi-Agent Coordinator](./agent_context_example/09-meta-orchestration/multi-agent-coordinator.md)
+*   [Performance Monitor](./agent_context_example/09-meta-orchestration/performance-monitor.md)
+*   [Task Distributor](./agent_context_example/09-meta-orchestration/task-distributor.md)
+*   [Workflow Orchestrator](./agent_context_example/09-meta-orchestration/workflow-orchestrator.md)
+
+### Research & Analysis
+
+*   [Competitive Analyst](./agent_context_example/10-research-analysis/competitive-analyst.md)
+*   [Data Researcher](./agent_context_example/10-research-analysis/data-researcher.md)
+*   [Market Researcher](./agent_context_example/10-research-analysis/market-researcher.md)
+*   [Research Analyst](./agent_context_example/10-research-analysis/research-analyst.md)
+*   [Search Specialist](./agent_context_example/10-research-analysis/search-specialist.md)
+*   [Trend Analyst](./agent_context_example/10-research-analysis/trend-analyst.md)
