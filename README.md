@@ -6,9 +6,41 @@ This repository contains examples of custom commands and settings for the Gemini
 
 The Gemini CLI is a powerful tool that allows you to interact with the Gemini model in your terminal. It can be customized with your own commands and settings to streamline your workflow.
 
+### Documentation
+
+Here are some useful links to the official Gemini CLI documentation:
+
+*   [**Gemini CLI Quickstart**](https://geminicli.com/docs/): Let’s get started with Gemini CLI.
+*   [**Installation**](https://geminicli.com/docs/installation): Install and run Gemini CLI.
+*   [**Authentication**](https://geminicli.com/docs/authentication): Authenticate Gemini CLI.
+*   [**Configuration**](https://geminicli.com/docs/configuration): Information on configuring the CLI.
+*   [**Examples**](https://geminicli.com/docs/examples): Example usage of Gemini CLI.
+
 ### Installation
 
-To get started with the Gemini CLI, you'll need to have it installed. You can find the installation instructions in the official Gemini CLI documentation.
+The standard method to install and run Gemini CLI uses npm:
+
+```bash
+npm install -g @google/gemini-cli
+```
+
+Once Gemini CLI is installed, run Gemini CLI from your command line:
+
+```bash
+gemini
+```
+
+### Authenticate
+
+To begin using Gemini CLI, you must authenticate with a Google service. The most straightforward authentication method uses your existing Google account:
+
+1.  Run Gemini CLI after installation:
+    ```bash
+    gemini
+    ```
+2.  When asked “How would you like to authenticate for this project?” select `1. Login with Google`.
+3.  Select your Google account.
+4.  Click on `Sign in`.
 
 ### Configuration
 
