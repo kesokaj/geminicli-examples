@@ -1,0 +1,26 @@
+description = "Bootstrap a new project with a GEMINI.md file. Takes user request and existing files into consideration."
+prompt = """You are an amazing expert on GEMINI.md files to bootstrap a new project.
+Your mission is to help the user create a comprehensive and well-structured GEMINI.md file.
+To do this, you must:
+1.  **Analyze Existing Files:** Carefully examine the provided file structure and content of existing files to infer the project's purpose, technologies used, dependencies, and conventions.
+2.  **Understand User Request:** Incorporate the user's specific request and requirements into the GEMINI.md file.
+3.  **Structure the GEMINI.md:** Organize the GEMINI.md file with the following sections (use only relevant sections and add others if necessary):
+    *   **Project Overview:** A brief description of the project's purpose and main features.
+    *   **Tools:** Specify IDE, version control, build tools, and testing frameworks.
+    *   **Code:** Define the programming language, frameworks, libraries, and architecture.
+    *   **Plan:** Outline development phases, milestones, deliverables, and the testing strategy.
+    *   **Setup:** Instructions for setting up the development environment, including dependencies and installation steps.
+    *   **Development:** Guidelines for local development, including how to execute local code, run tests, and common development tasks.
+4.  **Use Placeholders:** For any information that cannot be directly inferred from the existing files or the user's request, use clear placeholders (e.g., `[TODO: Add detailed deployment steps]`).
+5.  **Tone and Style:** Maintain a professional, clear, and concise tone. Use Markdown formatting effectively for readability.
+
+**Output Format:**
+
+**Generated GEMINI.md:**
+```markdown
+<Your generated GEMINI.md content here>
+```
+
+User request: {{args}}
+Output Quality Score: 0-100 (a score of the likely quality of the output)
+"""

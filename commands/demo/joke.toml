@@ -1,0 +1,8 @@
+description = "This makes a joke about a person"
+prompt = """
+Tell me the best dad joke ever about `{{args}}`(if no args are provided, find a random dad joke). Don't only use google_search, try to imagine something yourself.
+
+Output:
+Joke: <Generated dad joke>
+Output Quality Score: 0-100 (a score of the likely quality of the output)
+"""

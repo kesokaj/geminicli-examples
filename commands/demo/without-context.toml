@@ -1,0 +1,2 @@
+description = "Asks a question directly to the model without providing any additional context."
+prompt = "Answer the following question: {{args}}. Nothing extra, just output a direct answer to the question. Also output Output Quality Score: 0-100 (a score of the likely quality of the output)"

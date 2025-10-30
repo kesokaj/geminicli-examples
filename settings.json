@@ -1,0 +1,102 @@
+{
+  "advanced": {
+    "autoConfigureMemory": true
+  },
+  "context": {
+    "discoveryMaxDirs": -1,
+    "exclude": [
+      "**/node_modules/**",
+      "**/.git/**",
+      "**/dist/**",
+      "**/build/**",
+      "**/*.log"
+    ],
+    "fileName": [
+      "CONTEXT.md",
+      "GEMINI.md",
+      "CLAUDE.md"
+    ]
+  },
+  "experimental": {
+    "useModelRouter": true,
+    "codebaseInvestigatorSettings": {
+      "enabled": true
+    }
+  },
+  "general": {
+    "checkpointing": {
+      "enabled": true
+    },
+    "debugKeystrokeLogging": false,
+    "enablePromptCompletion": true,
+    "sessionRetention": {
+      "enabled": false
+    }
+  },
+  "ide": {
+    "enabled": true,
+    "hasSeenNudge": true
+  },
+  "mcpServers": {
+    "context7": {
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ],
+      "command": "npx",
+      "description": "Provides access to the Context7 documentation service. Use this for resolving and fetching documentation for a wide range of software libraries and packages.",
+      "trust": true
+    },
+    "gcloud": {
+      "args": [
+        "-y",
+        "@google-cloud/gcloud-mcp@latest"
+      ],
+      "command": "npx",
+      "description": "Executes gcloud commands to interact with Google Cloud Platform. Use this for managing GCP resources directly through the command-line interface.",
+      "trust": true
+    },
+    "godocs": {
+      "args": [
+        "stdio"
+      ],
+      "command": "$HOME/.go/bin/godoc-mcp",
+      "description": "Serves Go language documentation. Use this for any queries related to Go standard library packages, third-party modules, or local Go code documentation.",
+      "trust": true
+    },
+    "terraform": {
+      "args": [
+        "stdio"
+      ],
+      "command": "$HOME/.go/bin/terraform-mcp-server",
+      "description": "Interfaces with the Terraform Registry. Use this for finding, fetching details about, and getting the latest versions of Terraform providers, modules, and policies.",
+      "trust": true
+    }
+  },
+  "model": {
+    "chatCompression": {
+      "contextPercentage": 75
+    },
+    "summarizeToolOutput": {
+      "enabled": true
+    }
+  },
+  "security": {
+    "auth": {
+      "selectedType": "gemini-api-key"
+    },
+    "trustSelfSignedCerts": true
+  },
+  "tools": {
+    "autoAccept": true,
+    "shell": {
+      "showColor": true
+    }
+  },
+  "ui": {
+    "showMemoryUsage": true,
+    "theme": "Atom One",
+    "useFullWidth": true
+  },
+  "useWriteTodos": true
+}
