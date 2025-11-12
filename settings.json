@@ -1,38 +1,4 @@
 {
-  "advanced": {
-    "autoConfigureMemory": true
-  },
-  "context": {
-    "discoveryMaxDirs": -1,
-    "exclude": [
-      "**/node_modules/**",
-      "**/.git/**",
-      "**/dist/**",
-      "**/build/**",
-      "**/*.log"
-    ],
-    "fileName": [
-      "CONTEXT.md",
-      "GEMINI.md",
-      "CLAUDE.md"
-    ]
-  },
-  "experimental": {
-    "useModelRouter": true,
-    "codebaseInvestigatorSettings": {
-      "enabled": true
-    }
-  },
-  "general": {
-    "checkpointing": {
-      "enabled": true
-    },
-    "debugKeystrokeLogging": false,
-    "enablePromptCompletion": true,
-    "sessionRetention": {
-      "enabled": false
-    }
-  },
   "ide": {
     "enabled": true,
     "hasSeenNudge": true
@@ -73,30 +39,83 @@
       "trust": true
     }
   },
-  "model": {
-    "chatCompression": {
-      "contextPercentage": 75
-    },
-    "summarizeToolOutput": {
-      "enabled": true
-    }
-  },
   "security": {
     "auth": {
       "selectedType": "gemini-api-key"
     },
-    "trustSelfSignedCerts": true
+    "folderTrust": {
+      "enabled": true
+    }
   },
-  "tools": {
-    "autoAccept": true,
-    "shell": {
-      "showColor": true
+  "general": {
+    "sessionRetention": {
+      "enabled": true,
+      "maxAge": "24h",
+      "maxCount": 1000
+    },
+    "checkpoint": {
+      "enabled": true
     }
   },
   "ui": {
+    "showStatusInTitle": true,
+    "footer": {
+      "hideContextPercentage": false
+    },
     "showMemoryUsage": true,
-    "theme": "Atom One",
     "useFullWidth": true
   },
-  "useWriteTodos": true
+  "tools": {
+    "shell": {
+      "showColor": true
+    },
+    "autoAccept": true,
+    "allowed": [
+      "codebase_investigator",
+      "glob",
+      "google_web_search",
+      "read_file",
+      "list_directory",
+      "read_many_files",
+      "save_memory",
+      "search_file_content",
+      "web_fetch",
+      "write_todos",
+      "run_shell_command(ls)",
+      "run_shell_command(cat)",
+      "run_shell_command(grep)",
+      "run_shell_command(find)",
+      "run_shell_command(pwd)",
+      "run_shell_command(head)",
+      "run_shell_command(tail)",
+      "run_shell_command(wc)",
+      "run_shell_command(file)",
+      "run_shell_command(git status)",
+      "run_shell_command(git diff)",
+      "run_shell_command(git log)",
+      "run_shell_command(go version)",
+      "run_shell_command(go list)",
+      "run_shell_command(go doc)",
+      "run_shell_command(go env)",
+      "run_shell_command(python --version)",
+      "run_shell_command(pip list)",
+      "run_shell_command(gcloud list)",
+      "run_shell_command(gcloud describe)",
+      "run_shell_command(gcloud config list)",
+      "run_shell_command(kubectl get)",
+      "run_shell_command(kubectl describe)",
+      "run_shell_command(kubectl logs)",
+      "run_shell_command(echo)"
+    ]
+  },
+  "experimental": {
+    "useModelRouter": false
+  },
+  "useWriteTodos": true,
+  "advanced": {
+    "autoConfigureMemory": true
+  },
+  "mcp": {
+    "enabled": true
+  }
 }
